@@ -5,7 +5,6 @@ import SearchBar from '../components/SearchBar'
 function ListBeers({ beers, setData }) {
 
     const [ beersArray, setBeers ] = useState([])
-    const [ term, setTerm ] = useState('')
 
 
     useEffect(() => {
@@ -22,7 +21,7 @@ function ListBeers({ beers, setData }) {
 
   return (
     <>
-    <SearchBar handleSearch={handleSearch} setTerm={setTerm} />
+    <SearchBar handleSearch={handleSearch} />
     <div className='beers-container'>
         {beersArray.map((beer) => {
             return (
